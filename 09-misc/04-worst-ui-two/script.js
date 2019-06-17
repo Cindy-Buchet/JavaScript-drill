@@ -21,7 +21,9 @@
     //Mettre dans un tableau
     let tab = [];
     tab.push(donnee1, donnee2, donnee3, donnee4);
-
+    adaptNumber = value => {
+        return (value <= "9" ? `0${value}` : value)
+    }
     document.getElementById("target").innerHTML = "+";
 
     for (let i = 0; i < 4; i++){
@@ -65,8 +67,8 @@
 
     document.getElementById("part-two").addEventListener("click", () => {
             vide2 = vide2 + 1;
-            second.innerHTML = vide2;
-            document.getElementById("1").innerHTML = vide2;
+            second.innerHTML = adaptNumber(vide2);
+            document.getElementById("1").innerHTML = adaptNumber(vide2);
 
             if (vide2 == maxsecond){
                 vide2 = val2 -1;
@@ -82,8 +84,8 @@
 
     document.getElementById("part-three").addEventListener("click", () => {
         vide3 = vide3 + 1;
-        third.innerHTML = vide3;
-        document.getElementById("2").innerHTML = vide3;
+        third.innerHTML = adaptNumber(vide3);
+        document.getElementById("2").innerHTML = adaptNumber(vide3);
 
         if (vide3 == maxsecond){
             vide3 = val3 -1;
@@ -97,8 +99,8 @@
 
     document.getElementById("part-four").addEventListener("click", () => {
         vide4 = vide4 + 1;
-        fourth.innerHTML = vide4;
-        document.getElementById("3").innerHTML = vide4;
+        fourth.innerHTML = adaptNumber(vide4);
+        document.getElementById("3").innerHTML = adaptNumber(vide4);
 
         if (vide4 == maxsecond){
             vide4 = val4 -1;
